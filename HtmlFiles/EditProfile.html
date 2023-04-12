@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>تعديل الملف الشخصي</title>
+    <link rel="stylesheet" type="text/css" href="../CssFiles/style.css">
+
+</head>
+<body>
+<div class="add-modal" id="page">
+    <div class="modal__container">
+        <div class="modal__featured">
+            <div class="modal__circle"></div>
+            <img src="../images/icons/agreement.png" class="modal__add">
+        </div>
+        <div class="modal__content">
+            <h2 style="margin-bottom: 20px;">تعديل الملف الشخصي</h2>
+
+            <form>
+                <ul class="form-list">
+
+                    <div class="profile-pic">
+                        <label class="-label" for="file">
+                            <span class="glyphicon glyphicon-camera"></span>
+                            <span>تغير الصورة</span>
+                        </label>
+                        <input id="file" type="file" onchange="loadFile(event)"/>
+                        <img src="../images/persons/person2.png" id="output" width="200" />
+                    </div>
+
+                    <li class="form-list__row">
+                        <label>إسم المستخدم</label>
+                        <input type="text" class="play_list_input" required=""/>
+                    </li>
+
+                    <li class="form-list__row">
+                        <label>الإيميل</label>
+                        <input type="text" class="play_list_input" required=""/>
+                    </li>
+
+                    <li class="form-list__row">
+                        <label>رقم الهاتف</label>
+                        <input type="text" class="play_list_input" required=""/>
+
+                    </li>
+
+                    <li class="form-list__row">
+                        <label>كلمة المرور</label>
+                        <input type="text" class="play_list_input" required=""/>
+
+                    </li>
+
+<!--                    <li class="form-list__row">-->
+<!--                        <label> الصورة الشخصية</label>-->
+<!--                        <input type="file" class="play_list_input" required="" style="margin-top: 20px;"/>-->
+
+<!--                    </li>-->
+                    <li style="margin-top: 20px">
+                        <button type="submit" class="button-add">تعديل</button>
+                        <button type="button" class="button-cancel" >إلغاء</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var loadFile = function (event) {
+        var image = document.getElementById("output");
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
+</body>
+</html>
